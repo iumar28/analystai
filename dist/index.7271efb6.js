@@ -44277,7 +44277,25 @@ const Index = ()=>{
                                         ...provided.draggableProps,
                                         ...provided.dragHandleProps,
                                         style: getItemStyle(snapshot.isDragging, provided.draggableProps.style),
-                                        children: item.name
+                                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                            ref: provided.innerRef,
+                                            ...provided.draggableProps,
+                                            ...provided.dragHandleProps,
+                                            style: getItemStyle(snapshot.isDragging, provided.draggableProps.style),
+                                            children: [
+                                                item.username,
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                                                    fileName: "src/Index.js",
+                                                    lineNumber: 82,
+                                                    columnNumber: 3
+                                                }, undefined),
+                                                item.phone
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/Index.js",
+                                            lineNumber: 72,
+                                            columnNumber: 16
+                                        }, undefined)
                                     }, void 0, false, {
                                         fileName: "src/Index.js",
                                         lineNumber: 63,

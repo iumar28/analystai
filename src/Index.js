@@ -69,7 +69,20 @@ const Index = () => {
                   provided.draggableProps.style
                 )}
               >
-                {item.name}
+               <div
+  ref={provided.innerRef}
+  {...provided.draggableProps}
+  {...provided.dragHandleProps}
+  style={getItemStyle(
+    snapshot.isDragging,
+    provided.draggableProps.style
+  )}
+>
+ {item.username}
+  <br />
+  {item.phone}
+</div>
+
               </div>
             )}
           </Draggable>
