@@ -15,7 +15,7 @@ const Index = () => {
     }
   }
 
-  const grid = 8;
+  const grid = items.length;
 
   const getItemStyle = (isDragging, draggableStyle) => ({
     userSelect: "none",
@@ -77,10 +77,7 @@ const Index = () => {
     snapshot.isDragging,
     provided.draggableProps.style
   )}
->
- {item.username}
-  <br />
-  {item.phone}
+>  {item.name}
 </div>
 
               </div>

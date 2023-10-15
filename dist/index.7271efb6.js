@@ -44234,7 +44234,7 @@ const Index = ()=>{
             console.error("Error fetching data:", error);
         }
     }
-    const grid = 8;
+    const grid = items.length;
     const getItemStyle = (isDragging, draggableStyle)=>({
             userSelect: "none",
             padding: grid * 2,
@@ -44283,13 +44283,8 @@ const Index = ()=>{
                                             ...provided.dragHandleProps,
                                             style: getItemStyle(snapshot.isDragging, provided.draggableProps.style),
                                             children: [
-                                                item.username,
-                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                                                    fileName: "src/Index.js",
-                                                    lineNumber: 82,
-                                                    columnNumber: 3
-                                                }, undefined),
-                                                item.phone
+                                                "  ",
+                                                item.name
                                             ]
                                         }, void 0, true, {
                                             fileName: "src/Index.js",
