@@ -48,38 +48,39 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="flex justify-center"> {/* Center the list */}
-      <DragDropContext onDragEnd={onDragEnd}>
-        <Droppable droppableId="droppable">
-          {(provided, snapshot) => (
-            <div
-              {...provided.droppableProps}
-              ref={provided.innerRef}
-              style={getListStyle(snapshot.isDraggingOver)}
-            >
-              {items.map((item, index) => (
-                <Draggable key={item.id} draggableId={item.email} index={index}>
-                  {(provided, snapshot) => (
-                    <div
-                      ref={provided.innerRef}
-                      {...provided.draggableProps}
-                      {...provided.dragHandleProps}
-                      style={getItemStyle(
-                        snapshot.isDragging,
-                        provided.draggableProps.style
-                      )}
-                    >
-                      {item.name}
-                    </div>
-                  )}
-                </Draggable>
-              ))}
-              {provided.placeholder}
-            </div>
-          )}
-        </Droppable>
-      </DragDropContext>
-    </div>
+   <DragDropContext onDragEnd={onDragEnd}>
+  <Droppable droppableId="droppable">
+    {(provided, snapshot) => (
+      <div
+        {...provided.droppableProps}
+        ref={provided.innerRef}
+        style={getListStyle(snapshot.isDraggingOver)}
+        className="mx-auto mt-24" 
+      >
+        {items.map((item, index) => (
+          <Draggable key={item.id} draggableId={item.email} index={index}>
+            {(provided, snapshot) => (
+              <div
+                ref={provided.innerRef}
+                {...provided.draggableProps}
+                {...provided.dragHandleProps}
+                style={getItemStyle(
+                  snapshot.isDragging,
+                  provided.draggableProps.style
+                )}
+              >
+                {item.name}
+              </div>
+            )}
+          </Draggable>
+        ))}
+        {provided.placeholder}
+      </div>
+    )}
+  </Droppable>
+</DragDropContext>
+
+
   );
 };
 

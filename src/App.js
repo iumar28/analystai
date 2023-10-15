@@ -5,6 +5,7 @@ import Data from './Data'
 import Footer from './Footer'
 import Details from './Details'
 import Header from './Header';
+import Index from './Index'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
         path: "/data/:id",
         element: <Details />
       },
+      {
+        path: "/draggable",
+        element: <Index />
+      }
     ],
   },
 ]);
